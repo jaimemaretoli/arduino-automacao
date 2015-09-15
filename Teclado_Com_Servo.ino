@@ -1,16 +1,16 @@
-#include <Servo.h> // Biblioteca Servo
-#include <Keypad.h> // Biblioteca Teclado
-// Definimos a quantidade de linhas e colunas do teclado.
-#define ROWS 4
-#define COLUMNS 4
+#include <Servo.h> // IMPORTANDO BIBLIOTECA DO SERVO MOTOR
+#include <Keypad.h> // IMPORTANDO BIBLIOTECA DO TECLADO MATRICIAL
 
-Servo motor; // Instacia da Biblioteca Servo
+#define ROWS 4 // DEFININDO A QUANTIDADE DE LINHAS DO TECLADO MATRICIAL
+#define COLUMNS 4 // DEFININDO A QUANTIDADE DE COLUNAS DO TECLADO MATRICIAL
 
-char senha[3] = {'1', '2', '3'}; // senha cadastrada
-char senhaDigitada[3]; // senha digitada
-int i; // contador
+Servo motor; // INSTANCIANDO DA BIBLIOTECA DO SERVO MOTOR, UMA VARIÁVEL MOTOR DO TIPO SERVO
 
-// Fazemos o mapeamento das teclas.
+char senha[3] = {'1', '2', '3'}; // ARMAZENANDO SENHA CADASTRADA, COMO EXEMPLO, EM UM VETOR TIPO CHAR DE 3 ÍNDICES
+char senhaDigitada[3]; // CRIANDO VARIÁVEL DO TIPO CHAR PARA ARMAZENAR A SENHA INFORMADA PELO USUÁRIO
+int i; // CRIANDO VARIÁVEL DO TIPO INTEIRO PARA A CONTAGEM DO ÍNDICES
+
+// ABAIXO É FEITO O MAPEAMENTO DAS TECLAS DO TECLADO MATRICIAL, ARMAZENANDO EM UM VETOR TIPO CHAR DE 4 LINHAS E 4 COLUNAS
 char keyMap[ROWS][COLUMNS] = {
   {'1','2','3', 'A'},
   {'4','5','6', 'B'},
